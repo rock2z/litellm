@@ -344,7 +344,7 @@ Set `LITELLM_PROXY_API_BASE` and `LITELLM_PROXY_API_KEY` and every model call th
 | [CompactifAI (`compactifai`)](https://docs.litellm.ai/docs/providers/compactifai) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
 | [CoralBricks (`coralbricks`)](https://docs.litellm.ai/docs/providers/coralbricks) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
 | [Custom (`custom`)](https://docs.litellm.ai/docs/providers/custom_llm_server) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
-| [Custom OpenAI (`custom_openai`)](https://docs.litellm.ai/docs/providers/openai_compatible) | ✅ | ✅ | ✅ |  |  | ✅ | ✅ | ✅ | ✅ |  |
+| [Custom OpenAI (`custom_openai`)](https://docs.litellm.ai/docs/providers/openai_compatible) | ✅ | ✅ | ✅ |  | [Use `openai/`](https://docs.litellm.ai/docs/image_generation#openai-compatible-image-generation-models) | ✅ | ✅ | ✅ | ✅ |  |
 | [Dashscope (`dashscope`)](https://docs.litellm.ai/docs/providers/dashscope) | ✅ | ✅ | ✅ | ✅ |  |  |  |  |  | ✅ |
 | [Databricks (`databricks`)](https://docs.litellm.ai/docs/providers/databricks) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
 | [DataRobot (`datarobot`)](https://docs.litellm.ai/docs/providers/datarobot) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
@@ -427,6 +427,8 @@ Set `LITELLM_PROXY_API_BASE` and `LITELLM_PROXY_API_KEY` and every model call th
 | [Watsonx Text (`watsonx_text`)](https://docs.litellm.ai/docs/providers/watsonx) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
 | [xAI (`xai`)](https://docs.litellm.ai/docs/providers/xai) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
 | [Xinference (`xinference`)](https://docs.litellm.ai/docs/providers/xinference) |  |  |  | ✅ |  |  |  |  |  |  |
+
+OpenAI-compatible image generation uses `model="openai/<image-model>"` with your upstream `api_base` and `api_key`. This uses the `openai` provider, which is separate from the literal `custom_openai` provider in the table. Your upstream must implement `/images/generations`. See [OpenAI-compatible image generation models](https://docs.litellm.ai/docs/image_generation#openai-compatible-image-generation-models)
 
 [**Read the Docs**](https://docs.litellm.ai/docs/)
 
